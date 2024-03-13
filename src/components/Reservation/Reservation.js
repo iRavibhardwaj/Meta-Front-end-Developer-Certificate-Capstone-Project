@@ -16,9 +16,9 @@ const Reservation = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <label className='font-bold text-lg' htmlFor="date">Select a Date :</label>
-          <input id='date' className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-[#495e57] focus:outline-none' type="date" min={new Date().toISOString().split('T')[0]} required />
+          <input id='date' className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 focus:border-[#495e57] focus:outline-none' type="date" min={new Date().toISOString().split('T')[0]} required />
           <label className='font-bold text-lg' htmlFor="time">Select a Time Slot :</label>
-          <select className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-[#495e57] focus:outline-none' id="time" required>
+          <select className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 focus:border-[#495e57] focus:outline-none' id="time" required>
             <option className='font-bold'>4-6</option>
             <option className='font-bold'>5-7</option>
             <option className='font-bold'>6-8</option>
@@ -27,7 +27,7 @@ const Reservation = () => {
             <option className='font-bold'>9-11</option>
           </select>
           <label className='font-bold text-lg' htmlFor="diners">No. of Diners :</label>
-          <input id='diners' className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-[#495e57] focus:outline-none' type="number" min={1} max={20} required />
+          <input id='diners' className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-[#495e57] focus:outline-none' type="number" placeholder='No. of Diners' min={1} max={20} required />
           <label className='font-bold text-lg' htmlFor="ocassion">Ocassion :</label>
           <select className='w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-[#495e57] focus:outline-none' id="ocassion">
             <option className='font-bold'>Birthday</option>
