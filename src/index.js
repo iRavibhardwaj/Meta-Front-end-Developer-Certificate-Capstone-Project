@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import Home from './components/Home/Home';
+import Reservation from './components/Reservation/Reservation';
+import Confirmation from './components/Confirmation/Confirmation';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path = '/' element={<App/>}>
+      <Route path='' element={<Home/>}/>
+      <Route path='reservations' element={<Reservation/>}/>
+      <Route path='confirmation' element={<Confirmation/>}/>
+    </Route>
+  )
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
